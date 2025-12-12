@@ -1,0 +1,12 @@
+https://movies-backend-2twf.onrender.com/api/trending
+
+here thiers data 
+
+
+#How to make APK
+npm uninstall -g expo-cli
+npm install -g eas-cli
+npx expo login
+eas build:configure
+eas build -p android --profile production
+

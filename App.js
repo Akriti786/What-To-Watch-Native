@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useContext } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { Provider as PaperProvider } from "react-native-paper";
+import { FavoritesProvider } from "./src/context/FavoritesContext";
+import { ThemeProvider, ThemeContext } from "./src/context/ThemeContext";
+import TabNavigator from "./src/navigation/TabNavigator";
 
-export default function App() {
+function AppContent() {
+  const { colors, isDarkMode } = useContext(ThemeContext);
+
+  const paperTheme = {
+    dark: isDarkMode,
+    colors: {
+      primary: colors.text,
+      background: colors.background,
+      surface: colors.card,
+      text: colors.text,
+      placeholder: colors.text,
+      onSurfaceVariant: colors.text,
+    },
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider theme={paperTheme}>
+      <FavoritesProvider>
+        <NavigationContainer>
+          <TabNavigator />
+        </NavigationContainer>
+      </FavoritesProvider>
+    </PaperProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
