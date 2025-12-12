@@ -2,9 +2,9 @@
 import axios from "axios";
 
 // For Android Emulator
-export const API = "http://192.168.1.23:5000/api";
+export const API = "https://movies-backend-2twf.onrender.com";
 
 export const api = axios.create({
   baseURL: API,
-  timeout: 5000,
+  timeout: 30000,
 });
