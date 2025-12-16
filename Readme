@@ -10,3 +10,10 @@ npx expo login
 eas build:configure
 eas build -p android --profile production
 
+
+
+
+OR
+ npm install -g expo-cli
+ eas login
+ eas build -p android
