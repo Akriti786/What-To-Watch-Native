@@ -8,6 +8,7 @@
 //   baseURL: API,
 //   timeout: 60000,
 // });
+
 import axios from "axios";
 
 export const API = "https://movies-backend-2twf.onrender.com";

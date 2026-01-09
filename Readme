@@ -13,7 +13,13 @@ eas build -p android --profile production
 
 
 
-OR
+OR FOR ABB (PRODUCTION)
  npm install -g expo-cli
  eas login
  eas build -p android
+
+
+
+
+ FOR APK (PREVIEW)
+ eas build -p android --profile preview
