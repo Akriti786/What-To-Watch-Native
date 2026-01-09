@@ -22,4 +22,7 @@ OR FOR ABB (PRODUCTION)
 
 
  FOR APK (PREVIEW)
+ npm install -g expo-cli
+ eas login
  eas build -p android --profile preview
+ 
