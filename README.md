@@ -1,3 +1,5 @@
+PROJECT MAKING COMMAND (npx create-expo-app myApp --template blank)
+
 THIS IS THE LINK TO DOWNLOAD THE APP(https://expo.dev/accounts/akritishukla/projects/wht-to-watch/builds/43bd0cd4-9f22-4c9f-bb77-5ef26f8faab9)
  
  # What-To-Watch-Native
@@ -30,3 +32,4 @@ OR FOR ABB (PRODUCTION)
  eas login
 
  eas build -p android --profile preview
+
